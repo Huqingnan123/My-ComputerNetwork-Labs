@@ -1,0 +1,3708 @@
+******ģ�����绷��******��ģ�����绷����ʼ��...
+******ģ�����绷��******��ģ�����绷������...
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 29556, AAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 29556, AAAAAAAAAAAAAAAAAAAA
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�AAAAAAAAAAAAAAAAAAAA
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A* 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 26985, BBBBBBBBBBBBBBBBBBBB
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 24414, CCCCCCCCCCCCCCCCCCCC
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 21843, DDDDDDDDDDDDDDDDDDDD
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 19272, EEEEEEEEEEEEEEEEEEEE
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 26985, BBBBBBBBBBBBBBBBBBBB
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�BBBBBBBBBBBBBBBBBBBB
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 24414, CCCCCCCCCCCCCCCCCCCC
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�CCCCCCCCCCCCCCCCCCCC
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 21843, DDDDDDDDDDDDDDDDDDDD
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�DDDDDDDDDDDDDDDDDDDD
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 21843, DDDDDDDDDDDDDDDDDDDD
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 19272, EEEEEEEEEEEEEEEEEEEE
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 19272, EEEEEEEEEEEEEEEEEEEE
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�EEEEEEEEEEEEEEEEEEEE
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A* 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 16701, FFFFFFFFFFFFFFFFFFFF
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 14130, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 11559, HHHHHHHHHHHHHHHHHHHH
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 8996, IIIIIIIIIIIIIIIIIIII
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 16701, FFFFFFFFFFFFFFFFFFFF
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�FFFFFFFFFFFFFFFFFFFF
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = -999999, acknum = -1, checksum = 14130, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 14130, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 11559, HHHHHHHHHHHHHHHHHHHH
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-B 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 11559, HHHHHHHHHHHHHHHHHHHH
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 8996, IIIIIIIIIIIIIIIIIIII
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 14130, GGGGGGGGGGGGGGGGGGGG
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-B 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�GGGGGGGGGGGGGGGGGGGG
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�HHHHHHHHHHHHHHHHHHHH
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 11559, HHHHHHHHHHHHHHHHHHHH
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 0, acknum = -1, checksum = 8996, JIIIIIIIIIIIIIIIIIII
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 8996, IIIIIIIIIIIIIIIIIIII
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 8996, IIIIIIIIIIIIIIIIIIII
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 8996, IIIIIIIIIIIIIIIIIIII
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�IIIIIIIIIIIIIIIIIIII
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A* 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 6425, JJJJJJJJJJJJJJJJJJJJ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 3854, KKKKKKKKKKKKKKKKKKKK
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 1283, LLLLLLLLLLLLLLLLLLLL
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 64247, MMMMMMMMMMMMMMMMMMMM
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 6425, JJJJJJJJJJJJJJJJJJJJ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�JJJJJJJJJJJJJJJJJJJJ
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 3854, KKKKKKKKKKKKKKKKKKKK
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�KKKKKKKKKKKKKKKKKKKK
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 1283, LLLLLLLLLLLLLLLLLLLL
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�LLLLLLLLLLLLLLLLLLLL
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 64247, MMMMMMMMMMMMMMMMMMMM
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�MMMMMMMMMMMMMMMMMMMM
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 1283, LLLLLLLLLLLLLLLLLLLL
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 64247, MMMMMMMMMMMMMMMMMMMM
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A* 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 61676, NNNNNNNNNNNNNNNNNNNN
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 59105, OOOOOOOOOOOOOOOOOOOO
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 56534, PPPPPPPPPPPPPPPPPPPP
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 53971, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 61676, NNNNNNNNNNNNNNNNNNNN
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�NNNNNNNNNNNNNNNNNNNN
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 59105, OOOOOOOOOOOOOOOOOOOO
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�OOOOOOOOOOOOOOOOOOOO
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 59105, OOOOOOOOOOOOOOOOOOOO
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 56534, PPPPPPPPPPPPPPPPPPPP
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 53971, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 56534, PPPPPPPPPPPPPPPPPPPP
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�PPPPPPPPPPPPPPPPPPPP
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = -999999, acknum = -1, checksum = 53971, QQQQQQQQQQQQQQQQQQQQ
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 53971, QQQQQQQQQQQQQQQQQQQQ
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -1, acknum = 6, checksum = 12845, /...................
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 53971, QQQQQQQQQQQQQQQQQQQQ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�QQQQQQQQQQQQQQQQQQQQ
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 53971, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A* 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = -999999, acknum = -1, checksum = 53971, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 51400, RRRRRRRRRRRRRRRRRRRR
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 48829, SSSSSSSSSSSSSSSSSSSS
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 46258, TTTTTTTTTTTTTTTTTTTT
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 43687, UUUUUUUUUUUUUUUUUUUU
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 51400, RRRRRRRRRRRRRRRRRRRR
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�RRRRRRRRRRRRRRRRRRRR
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 48829, SSSSSSSSSSSSSSSSSSSS
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�SSSSSSSSSSSSSSSSSSSS
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 46258, TTTTTTTTTTTTTTTTTTTT
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�TTTTTTTTTTTTTTTTTTTT
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 46258, TTTTTTTTTTTTTTTTTTTT
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 43687, UUUUUUUUUUUUUUUUUUUU
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 43687, UUUUUUUUUUUUUUUUUUUU
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�UUUUUUUUUUUUUUUUUUUU
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 46258, TTTTTTTTTTTTTTTTTTTT
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 41116, VVVVVVVVVVVVVVVVVVVV
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 38545, WWWWWWWWWWWWWWWWWWWW
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 35974, XXXXXXXXXXXXXXXXXXXX
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 33411, YYYYYYYYYYYYYYYYYYYY
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 41116, VVVVVVVVVVVVVVVVVVVV
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�VVVVVVVVVVVVVVVVVVVV
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 38545, WWWWWWWWWWWWWWWWWWWW
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�WWWWWWWWWWWWWWWWWWWW
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 7, acknum = -1, checksum = 35974, YXXXXXXXXXXXXXXXXXXX
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 35974, XXXXXXXXXXXXXXXXXXXX
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 33411, YYYYYYYYYYYYYYYYYYYY
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 33411, YYYYYYYYYYYYYYYYYYYY
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-B 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 35974, XXXXXXXXXXXXXXXXXXXX
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-B 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�XXXXXXXXXXXXXXXXXXXX
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�YYYYYYYYYYYYYYYYYYYY
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 30840, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 29554, AAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 26983, BBBBBBBBBBBBBBBBBBBB
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 24412, CCCCCCCCCCCCCCCCCCCC
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = -999999, acknum = -1, checksum = 30840, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 29554, AAAAAAAAAAAAAAAAAAAA
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-B 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 26983, BBBBBBBBBBBBBBBBBBBB
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-B 3-B 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 1, acknum = -1, checksum = 30840, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 29554, AAAAAAAAAAAAAAAAAAAA
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -999999, acknum = 2, checksum = 12849, ....................
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 26983, BBBBBBBBBBBBBBBBBBBB
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 24412, CCCCCCCCCCCCCCCCCCCC
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 24412, CCCCCCCCCCCCCCCCCCCC
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 30840, ZZZZZZZZZZZZZZZZZZZZ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�ZZZZZZZZZZZZZZZZZZZZ
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�AAAAAAAAAAAAAAAAAAAA
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�BBBBBBBBBBBBBBBBBBBB
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�CCCCCCCCCCCCCCCCCCCC
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A 2-A 3-A* 4-A ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A 2-A 3-A* 4-A* ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 1, acknum = -1, checksum = 30840, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 29554, AAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A* 4-A* ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A* 4-A* 5-B ]6-C 7-C 0-C 1-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A* 4-A* 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 21841, DDDDDDDDDDDDDDDDDDDD
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 19270, EEEEEEEEEEEEEEEEEEEE
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 16699, FFFFFFFFFFFFFFFFFFFF
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 14136, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 19270, EEEEEEEEEEEEEEEEEEEE
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 16699, FFFFFFFFFFFFFFFFFFFF
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-B 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 14136, GGGGGGGGGGGGGGGGGGGG
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A 6-A 7-A* 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A 6-A 7-A* 0-A* ]1-C 2-C 3-C 4-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 5, acknum = -1, checksum = 21841, DDDDDDDDDDDDDDDDDDDD
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 19270, EEEEEEEEEEEEEEEEEEEE
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 21841, DDDDDDDDDDDDDDDDDDDD
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�DDDDDDDDDDDDDDDDDDDD
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�EEEEEEEEEEEEEEEEEEEE
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�FFFFFFFFFFFFFFFFFFFF
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�GGGGGGGGGGGGGGGGGGGG
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A* 0-A* ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A* 0-A* 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A* 0-A* 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 11565, HHHHHHHHHHHHHHHHHHHH
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 8994, IIIIIIIIIIIIIIIIIIII
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 6423, JJJJJJJJJJJJJJJJJJJJ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 3852, KKKKKKKKKKKKKKKKKKKK
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 11565, HHHHHHHHHHHHHHHHHHHH
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�HHHHHHHHHHHHHHHHHHHH
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 8994, IIIIIIIIIIIIIIIIIIII
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�IIIIIIIIIIIIIIIIIIII
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 1, acknum = -1, checksum = 11565, HHHHHHHHHHHHHHHHHHHH
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 8994, IIIIIIIIIIIIIIIIIIII
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 3852, KKKKKKKKKKKKKKKKKKKK
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 6423, JJJJJJJJJJJJJJJJJJJJ
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = -999999, acknum = -1, checksum = 6423, JJJJJJJJJJJJJJJJJJJJ
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A 2-A* 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 3852, KKKKKKKKKKKKKKKKKKKK
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A 2-A* 3-A 4-A* ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A* 3-A 4-A* ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 3852, KKKKKKKKKKKKKKKKKKKK
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 6423, JJJJJJJJJJJJJJJJJJJJ
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 6423, JJJJJJJJJJJJJJJJJJJJ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�JJJJJJJJJJJJJJJJJJJJ
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�KKKKKKKKKKKKKKKKKKKK
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 1281, LLLLLLLLLLLLLLLLLLLL
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 64245, MMMMMMMMMMMMMMMMMMMM
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 61674, NNNNNNNNNNNNNNNNNNNN
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 59111, OOOOOOOOOOOOOOOOOOOO
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 5, acknum = -1, checksum = 1281, MLLLLLLLLLLLLLLLLLLL
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 64245, MMMMMMMMMMMMMMMMMMMM
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 61674, NNNNNNNNNNNNNNNNNNNN
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-B 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A 6-A* 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A 6-A* 7-A* 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 59111, OOOOOOOOOOOOOOOOOOOO
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 5, acknum = -1, checksum = 1281, LLLLLLLLLLLLLLLLLLLL
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 59111, OOOOOOOOOOOOOOOOOOOO
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A 6-A* 7-A* 0-A* ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 1281, LLLLLLLLLLLLLLLLLLLL
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�LLLLLLLLLLLLLLLLLLLL
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�MMMMMMMMMMMMMMMMMMMM
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�NNNNNNNNNNNNNNNNNNNN
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�OOOOOOOOOOOOOOOOOOOO
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A* 7-A* 0-A* ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 56540, PPPPPPPPPPPPPPPPPPPP
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 53969, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 51398, RRRRRRRRRRRRRRRRRRRR
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 48827, SSSSSSSSSSSSSSSSSSSS
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 56540, PPPPPPPPPPPPPPPPPPPP
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�PPPPPPPPPPPPPPPPPPPP
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 2, acknum = -1, checksum = 53969, RQQQQQQQQQQQQQQQQQQQ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 1, acknum = -1, checksum = 56540, PPPPPPPPPPPPPPPPPPPP
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 53969, QQQQQQQQQQQQQQQQQQQQ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 51398, RRRRRRRRRRRRRRRRRRRR
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 48827, SSSSSSSSSSSSSSSSSSSS
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 51398, RRRRRRRRRRRRRRRRRRRR
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-B 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -999999, acknum = 3, checksum = 12848, ....................
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 48827, SSSSSSSSSSSSSSSSSSSS
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-B 4-B 5-A ]6-C 7-C 0-C 1-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -1, acknum = -999999, checksum = 12847, ....................
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-B 4-B 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 51398, RRRRRRRRRRRRRRRRRRRR
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-B 4-B 5-A ]6-C 7-C 0-C 1-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 53969, QQQQQQQQQQQQQQQQQQQQ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 51398, RRRRRRRRRRRRRRRRRRRR
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 48827, SSSSSSSSSSSSSSSSSSSS
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A* 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 48827, SSSSSSSSSSSSSSSSSSSS
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-B 4-B 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A* 4-A* 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 53969, QQQQQQQQQQQQQQQQQQQQ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-B 4-B 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�QQQQQQQQQQQQQQQQQQQQ
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�RRRRRRRRRRRRRRRRRRRR
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�SSSSSSSSSSSSSSSSSSSS
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 53969, QQQQQQQQQQQQQQQQQQQQ
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A* 4-A* 5-B ]6-C 7-C 0-C 1-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A* 4-A* 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 46256, TTTTTTTTTTTTTTTTTTTT
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 43685, UUUUUUUUUUUUUUUUUUUU
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 41114, VVVVVVVVVVVVVVVVVVVV
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 38551, WWWWWWWWWWWWWWWWWWWW
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 46256, TTTTTTTTTTTTTTTTTTTT
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�TTTTTTTTTTTTTTTTTTTT
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 43685, UUUUUUUUUUUUUUUUUUUU
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�UUUUUUUUUUUUUUUUUUUU
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 5, acknum = -1, checksum = 46256, TTTTTTTTTTTTTTTTTTTT
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 43685, UUUUUUUUUUUUUUUUUUUU
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 41114, VVVVVVVVVVVVVVVVVVVV
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 38551, WWWWWWWWWWWWWWWWWWWW
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 41114, VVVVVVVVVVVVVVVVVVVV
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�VVVVVVVVVVVVVVVVVVVV
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 38551, WWWWWWWWWWWWWWWWWWWW
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�WWWWWWWWWWWWWWWWWWWW
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -999999, acknum = 7, checksum = 12844, ....................
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 41114, VVVVVVVVVVVVVVVVVVVV
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 0, acknum = -1, checksum = 38551, XWWWWWWWWWWWWWWWWWWW
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 35980, XXXXXXXXXXXXXXXXXXXX
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 33409, YYYYYYYYYYYYYYYYYYYY
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 30838, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 29552, AAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 35980, XXXXXXXXXXXXXXXXXXXX
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�XXXXXXXXXXXXXXXXXXXX
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 33409, YYYYYYYYYYYYYYYYYYYY
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�YYYYYYYYYYYYYYYYYYYY
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 30838, ZZZZZZZZZZZZZZZZZZZZ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�ZZZZZZZZZZZZZZZZZZZZ
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 30838, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 29552, AAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 4, acknum = -1, checksum = 29552, BAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 29552, AAAAAAAAAAAAAAAAAAAA
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�AAAAAAAAAAAAAAAAAAAA
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 29552, AAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A* 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 26981, BBBBBBBBBBBBBBBBBBBB
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 24410, CCCCCCCCCCCCCCCCCCCC
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 21839, DDDDDDDDDDDDDDDDDDDD
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 19276, EEEEEEEEEEEEEEEEEEEE
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 26981, BBBBBBBBBBBBBBBBBBBB
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�BBBBBBBBBBBBBBBBBBBB
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 24410, CCCCCCCCCCCCCCCCCCCC
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�CCCCCCCCCCCCCCCCCCCC
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 24410, CCCCCCCCCCCCCCCCCCCC
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 21839, DDDDDDDDDDDDDDDDDDDD
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 19276, EEEEEEEEEEEEEEEEEEEE
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 7, acknum = -1, checksum = 21839, EDDDDDDDDDDDDDDDDDDD
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 19276, EEEEEEEEEEEEEEEEEEEE
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-B 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-B 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 21839, DDDDDDDDDDDDDDDDDDDD
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-B 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�DDDDDDDDDDDDDDDDDDDD
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�EEEEEEEEEEEEEEEEEEEE
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 21839, DDDDDDDDDDDDDDDDDDDD
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 16705, FFFFFFFFFFFFFFFFFFFF
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 14134, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 11563, HHHHHHHHHHHHHHHHHHHH
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 8992, IIIIIIIIIIIIIIIIIIII
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 16705, FFFFFFFFFFFFFFFFFFFF
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�FFFFFFFFFFFFFFFFFFFF
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 8992, IIIIIIIIIIIIIIIIIIII
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-B 5-A ]6-C 7-C 0-C 1-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 14134, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A* 5-B ]6-C 7-C 0-C 1-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 11563, HHHHHHHHHHHHHHHHHHHH
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 14134, GGGGGGGGGGGGGGGGGGGG
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-B 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�GGGGGGGGGGGGGGGGGGGG
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A* 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 11563, HHHHHHHHHHHHHHHHHHHH
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�HHHHHHHHHHHHHHHHHHHH
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�IIIIIIIIIIIIIIIIIIII
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -1, acknum = 3, checksum = 12848, /...................
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 11563, HHHHHHHHHHHHHHHHHHHH
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 6421, JJJJJJJJJJJJJJJJJJJJ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 3850, KKKKKKKKKKKKKKKKKKKK
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 1279, LLLLLLLLLLLLLLLLLLLL
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 6421, JJJJJJJJJJJJJJJJJJJJ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�JJJJJJJJJJJJJJJJJJJJ
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 3850, KKKKKKKKKKKKKKKKKKKK
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�KKKKKKKKKKKKKKKKKKKK
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 1279, LLLLLLLLLLLLLLLLLLLL
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 1279, LLLLLLLLLLLLLLLLLLLL
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�LLLLLLLLLLLLLLLLLLLL
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�MMMMMMMMMMMMMMMMMMMM
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -1, acknum = 0, checksum = 12851, /...................
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 1279, LLLLLLLLLLLLLLLLLLLL
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 0, acknum = -999999, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 0, acknum = -1, checksum = 64251, NMMMMMMMMMMMMMMMMMMM
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 64251, MMMMMMMMMMMMMMMMMMMM
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A* 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 61680, NNNNNNNNNNNNNNNNNNNN
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 59109, OOOOOOOOOOOOOOOOOOOO
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 56538, PPPPPPPPPPPPPPPPPPPP
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 61680, NNNNNNNNNNNNNNNNNNNN
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�NNNNNNNNNNNNNNNNNNNN
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 53967, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 59109, OOOOOOOOOOOOOOOOOOOO
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�OOOOOOOOOOOOOOOOOOOO
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 56538, PPPPPPPPPPPPPPPPPPPP
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�PPPPPPPPPPPPPPPPPPPP
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 53967, QQQQQQQQQQQQQQQQQQQQ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�QQQQQQQQQQQQQQQQQQQQ
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 56538, PPPPPPPPPPPPPPPPPPPP
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 53967, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A* 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 51396, RRRRRRRRRRRRRRRRRRRR
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 48825, SSSSSSSSSSSSSSSSSSSS
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 46254, TTTTTTTTTTTTTTTTTTTT
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 43691, UUUUUUUUUUUUUUUUUUUU
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 51396, RRRRRRRRRRRRRRRRRRRR
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�RRRRRRRRRRRRRRRRRRRR
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 46254, TTTTTTTTTTTTTTTTTTTT
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-B 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A* 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 48825, SSSSSSSSSSSSSSSSSSSS
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 43691, UUUUUUUUUUUUUUUUUUUU
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 48825, SSSSSSSSSSSSSSSSSSSS
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-B 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�SSSSSSSSSSSSSSSSSSSS
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�TTTTTTTTTTTTTTTTTTTT
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A* 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 43691, UUUUUUUUUUUUUUUUUUUU
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�UUUUUUUUUUUUUUUUUUUU
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 43691, UUUUUUUUUUUUUUUUUUUU
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A* 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 41120, VVVVVVVVVVVVVVVVVVVV
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 38549, WWWWWWWWWWWWWWWWWWWW
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 35978, XXXXXXXXXXXXXXXXXXXX
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 33407, YYYYYYYYYYYYYYYYYYYY
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 41120, VVVVVVVVVVVVVVVVVVVV
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�VVVVVVVVVVVVVVVVVVVV
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 38549, WWWWWWWWWWWWWWWWWWWW
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�WWWWWWWWWWWWWWWWWWWW
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 38549, WWWWWWWWWWWWWWWWWWWW
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 35978, XXXXXXXXXXXXXXXXXXXX
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 33407, YYYYYYYYYYYYYYYYYYYY
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 35978, XXXXXXXXXXXXXXXXXXXX
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�XXXXXXXXXXXXXXXXXXXX
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 33407, YYYYYYYYYYYYYYYYYYYY
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�YYYYYYYYYYYYYYYYYYYY
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -1, acknum = 4, checksum = 12847, /...................
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 33407, YYYYYYYYYYYYYYYYYYYY
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 33407, YYYYYYYYYYYYYYYYYYYY
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A* 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 30836, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 29550, AAAAAAAAAAAAAAAAAAAA
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 26979, BBBBBBBBBBBBBBBBBBBB
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 24416, CCCCCCCCCCCCCCCCCCCC
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 5, acknum = -1, checksum = 30836, [ZZZZZZZZZZZZZZZZZZZ
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 29550, AAAAAAAAAAAAAAAAAAAA
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A 6-A* 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 26979, BBBBBBBBBBBBBBBBBBBB
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-B 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 24416, CCCCCCCCCCCCCCCCCCCC
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A 6-A* 7-A 0-A* ]1-C 2-C 3-C 4-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 5, acknum = -1, checksum = 30836, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 26979, BBBBBBBBBBBBBBBBBBBB
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 30836, ZZZZZZZZZZZZZZZZZZZZ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�ZZZZZZZZZZZZZZZZZZZZ
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�AAAAAAAAAAAAAAAAAAAA
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�BBBBBBBBBBBBBBBBBBBB
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�CCCCCCCCCCCCCCCCCCCC
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 5, acknum = -1, checksum = 30836, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 26979, BBBBBBBBBBBBBBBBBBBB
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A* 7-A 0-A* ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 5, acknum = -1, checksum = 30836, [ZZZZZZZZZZZZZZZZZZZ
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 21845, DDDDDDDDDDDDDDDDDDDD
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 19274, EEEEEEEEEEEEEEEEEEEE
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 16703, FFFFFFFFFFFFFFFFFFFF
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 14132, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 21845, DDDDDDDDDDDDDDDDDDDD
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�DDDDDDDDDDDDDDDDDDDD
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 16703, FFFFFFFFFFFFFFFFFFFF
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-B 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A* 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 4, acknum = -1, checksum = 14132, HGGGGGGGGGGGGGGGGGGG
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 2, acknum = -1, checksum = 19274, EEEEEEEEEEEEEEEEEEEE
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 14132, GGGGGGGGGGGGGGGGGGGG
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 19274, EEEEEEEEEEEEEEEEEEEE
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-B 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�EEEEEEEEEEEEEEEEEEEE
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�FFFFFFFFFFFFFFFFFFFF
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A* 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 14132, GGGGGGGGGGGGGGGGGGGG
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�GGGGGGGGGGGGGGGGGGGG
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A* 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 11561, HHHHHHHHHHHHHHHHHHHH
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 8990, IIIIIIIIIIIIIIIIIIII
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 6419, JJJJJJJJJJJJJJJJJJJJ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 3856, KKKKKKKKKKKKKKKKKKKK
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 11561, HHHHHHHHHHHHHHHHHHHH
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�HHHHHHHHHHHHHHHHHHHH
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 8990, IIIIIIIIIIIIIIIIIIII
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�IIIIIIIIIIIIIIIIIIII
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 6419, JJJJJJJJJJJJJJJJJJJJ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�JJJJJJJJJJJJJJJJJJJJ
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 6419, JJJJJJJJJJJJJJJJJJJJ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 3856, KKKKKKKKKKKKKKKKKKKK
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 3856, KKKKKKKKKKKKKKKKKKKK
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�KKKKKKKKKKKKKKKKKKKK
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 0-A* 1-B 2-B 3-B ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 1285, LLLLLLLLLLLLLLLLLLLL
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 64249, MMMMMMMMMMMMMMMMMMMM
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 61678, NNNNNNNNNNNNNNNNNNNN
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 59107, OOOOOOOOOOOOOOOOOOOO
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 1285, LLLLLLLLLLLLLLLLLLLL
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�LLLLLLLLLLLLLLLLLLLL
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 64249, MMMMMMMMMMMMMMMMMMMM
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�MMMMMMMMMMMMMMMMMMMM
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 61678, NNNNNNNNNNNNNNNNNNNN
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 59107, OOOOOOOOOOOOOOOOOOOO
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 59107, OOOOOOOOOOOOOOOOOOOO
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 59107, OOOOOOOOOOOOOOOOOOOO
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 3, acknum = -1, checksum = 61678, NNNNNNNNNNNNNNNNNNNN
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 61678, NNNNNNNNNNNNNNNNNNNN
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-B 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�NNNNNNNNNNNNNNNNNNNN
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�OOOOOOOOOOOOOOOOOOOO
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A* 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 56536, PPPPPPPPPPPPPPPPPPPP
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 53965, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 51394, RRRRRRRRRRRRRRRRRRRR
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 48831, SSSSSSSSSSSSSSSSSSSS
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 56536, PPPPPPPPPPPPPPPPPPPP
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�PPPPPPPPPPPPPPPPPPPP
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 53965, QQQQQQQQQQQQQQQQQQQQ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�QQQQQQQQQQQQQQQQQQQQ
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 51394, RRRRRRRRRRRRRRRRRRRR
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�RRRRRRRRRRRRRRRRRRRR
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-A 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 53965, QQQQQQQQQQQQQQQQQQQQ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 51394, RRRRRRRRRRRRRRRRRRRR
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 48831, SSSSSSSSSSSSSSSSSSSS
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A* 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 48831, SSSSSSSSSSSSSSSSSSSS
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 0-B 1-A 2-A 3-A ]4-C 5-C 6-C 7-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�SSSSSSSSSSSSSSSSSSSS
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A* 0-A* 1-B ]2-C 3-C 4-C 5-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 6, acknum = -1, checksum = 53965, QQQQQQQQQQQQQQQQQQQQ
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A* 0-A* 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 1, acknum = -1, checksum = 46260, TTTTTTTTTTTTTTTTTTTT
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 2, acknum = -1, checksum = 43689, UUUUUUUUUUUUUUUUUUUU
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 3, acknum = -1, checksum = 41118, VVVVVVVVVVVVVVVVVVVV
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 4, acknum = -1, checksum = 38547, WWWWWWWWWWWWWWWWWWWW
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 1, acknum = -1, checksum = 46260, TTTTTTTTTTTTTTTTTTTT
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-B 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�TTTTTTTTTTTTTTTTTTTT
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-A 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 2, acknum = -1, checksum = 43689, UUUUUUUUUUUUUUUUUUUU
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 2-B 3-A 4-A 5-A ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�UUUUUUUUUUUUUUUUUUUU
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-A 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 1, checksum = 12850, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-A* 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 2, checksum = 12849, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 2-A* 3-A 4-A 5-B ]6-C 7-C 0-C 1-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 3, acknum = -1, checksum = 41118, VVVVVVVVVVVVVVVVVVVV
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 3-B 4-A 5-A 6-A ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�VVVVVVVVVVVVVVVVVVVV
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-A 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 3, checksum = 12848, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 3-A* 4-A 5-B 6-B ]7-C 0-C 1-C 2-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 4, acknum = -1, checksum = 38547, WWWWWWWWWWWWWWWWWWWW
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 4-B 5-A 6-A 7-A ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�WWWWWWWWWWWWWWWWWWWW
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 4, acknum = -1, checksum = 38547, WWWWWWWWWWWWWWWWWWWW
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-A 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -1, acknum = 4, checksum = 12847, /...................
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 4, checksum = 12847, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 4-A* 5-B 6-B 7-B ]0-C 1-C 2-C 3-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-B 6-B 7-B 0-B ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 5, acknum = -1, checksum = 35976, XXXXXXXXXXXXXXXXXXXX
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 6, acknum = -1, checksum = 33405, YYYYYYYYYYYYYYYYYYYY
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 7, acknum = -1, checksum = 30834, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 5, acknum = -1, checksum = 35976, XXXXXXXXXXXXXXXXXXXX
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 5-B 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�XXXXXXXXXXXXXXXXXXXX
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-A 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:SEND PACKETS: seqnum = 0, acknum = -1, checksum = 29873, EOF                 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 6, acknum = -1, checksum = 33405, YYYYYYYYYYYYYYYYYYYY
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 6-B 7-A 0-A 1-A ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�YYYYYYYYYYYYYYYYYYYY
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-A 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[FAILED]:PACKET CHECKSUM ERROR: seqnum = 7, acknum = -1, checksum = 30834, [ZZZZZZZZZZZZZZZZZZZ
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 5, checksum = 12846, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 5-A* 6-A 7-A 0-A ]1-C 2-C 3-C 4-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 0, acknum = -1, checksum = 29873, EOF                 
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-A 0-B 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 6, checksum = 12845, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 6-A* 7-A 0-A 1-B ]2-C 3-C 4-C 5-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 7, acknum = -1, checksum = 30834, ZZZZZZZZZZZZZZZZZZZZ
+
+
+[TIMEOUT]: SEND THIS TIMEOUT PACKET AGAIN: seqnum = 0, acknum = -1, checksum = 29873, EOF                 
+
+
+[SUCCEED]:RECEIVE AN EXPECTED PACKET: seqnum = 7, acknum = -1, checksum = 30834, ZZZZZZZZZZZZZZZZZZZZ
+
+[SUCCEED]:RETURN ACK TO SENDER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 7-B 0-B 1-A 2-A ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]: RECEIVER SEND BASE ACK, THEN RECEIVER CAN MOVE WINDOW!!!
+
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�ZZZZZZZZZZZZZZZZZZZZ
+******ģ�����绷��******�����ϵݽ���Ӧ�ò����ݣ�EOF                  
+
+------AFTER MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+RECEIVER HAVE BUFFERED THIS PACKET...
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+[SUCCEED]:RECEIVE PREV PACKET AND RETURN PREV ACK TO SENDER: seqnum = -1, acknum = 0, checksum = 12851, ....................
+
+------BEFORE MOVING "RECEIVER" WINDOW------(A: Empty buffer; B: Mis_order and buffered packet; C:Unusable )
+***RECEIVER WINDOW: [ 1-A 2-A 3-A 4-A ]5-C 6-C 7-C 0-C 
+
+
+[SUCCEED]:GET A ACK FROM RECEIVER: seqnum = -1, acknum = 7, checksum = 12844, ....................
+
+------BEFORE MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 7-A* 0-A* 1-B 2-B ]3-C 4-C 5-C 6-C 
+
+
+[SUCCEED]:RECEIVE BASE SEQNUM, THEN SENDER CAN MOVE WINDOW!!!
+
+------After MOVING "SENDER" WINDOW------(A: Send but not get ack; A*: Send and get ack; B: Usable but haven't sent; C:Unusable )
+***SENDER WINDOW: [ 1-B 2-B 3-B 4-B ]5-C 6-C 7-C 0-C 
+
+[FAILED]:ACKPKT CHECKSUM ERROR: seqnum = -1, acknum = 0, checksum = 12851, /...................
+******ģ�����绷��******��ģ�����绷���ѷ�����Ӧ�ò����ݣ��ر�ģ�����绷��
+�ѷ���Ӧ�ò�Message����: 105
+���͵����������Packet����: 198
+����㶪ʧ������Packet����: 21
+������𻵵�����pakcet����:18
+���͵������ȷ��Packet����:159
+����㶪ʧ��ȷ��Packet����: 14
+������𻵵�ȷ��Packet����: 10
+

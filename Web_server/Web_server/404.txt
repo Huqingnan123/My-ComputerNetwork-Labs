@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html lang = en>
+<head>
+<meta charset = utf-8>
+<title>404 NOT FOUND</title>
+</head>
+<body>
+<h1>404 NOT FOUND</h1>
+<h3>Cannot find the page requesting for...</h3>
+</body>
+</html>
